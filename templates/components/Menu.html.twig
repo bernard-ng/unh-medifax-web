@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg main_menu">
+    <div class="container">
+        <a class="navbar-brand" href="{{ path('app_index') }}">
+            <img src="images/Logo_1.png" alt="logo" class="img-fluid w-100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars bar_icon"></i>
+            <i class="far fa-times close_icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ path('app_index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_service_index') }}">services</a>
+                </li>
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_profile') }}">Mon compte</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+                    </li>
+                {% endif %}
+            </ul>
+            <ul class="menu_btn d-flex flex-wrap align-items-center">
+                <li><a href="/#appointment" class="common_btn">Appointment</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="dashboard mt_150 xs_mt_70 pb_100 xs_pb_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 wow fadeInLeft" data-wow-duration="1s">
+                    <div class="user_profile">
+                        <div class="user_profile_img">
+                            <img src="images/user_img.png" alt="user" class=" img-fluid w-100">
+                        </div>
+                        <h4>{{ app.user.fullName }}</h4>
+                        <p>{{ app.user.roles | last | lower }} Id : {{ app.user.id }}</p>
+                    </div>
+                    <ul class="dashboard_menu">
+                        <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-9 col-lg-8 wow fadeInRight" data-wow-duration="1s">
+                    <div class="dashboard_content">
+                        <h5>Appointment</h5>
+                        <div class="appointment_history">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <th class="sn">
+                                            SN
+                                        </th>
+                                        <th class="name">
+                                            Doctor
+                                        </th>
+
+                                        <th class="date">
+                                            Date
+                                        </th>
+
+                                        <th class="date">
+                                            Description
+                                        </th>
+
+                                        <th class="status">
+                                            Status
+                                        </th>
+
+                                        {% if is_granted('ROLE_DOCTOR') %}
+                                            <th class="edit">
+                                                Action
+                                            </th>
+                                        {% endif %}
+                                    </tr>
+                                    {% for appointement in app.user.appointments %}
+                                        <tr class="tabile_row">
+                                            <td class="sn">
+                                                <p>{{ appointement.id }}</p>
+                                            </td>
+
+                                            <td class="name">
+                                                <p>{{ appointement.doctor.fullName }}</p>
+                                                <span>{{ appointement.doctor.specialization.name }}</span>
+                                            </td>
+
+                                            <td class="date">
+                                                <p>{{ appointement.date | date('d M Y') }}</p>
+                                            </td>
+
+                                            <td class="date">
+                                                <p>{{ appointement.description }}</p>
+                                            </td>
+
+                                            <td class="status">
+                                                <button>{{ appointement.status.value }}</button>
+                                            </td>
+
+                                           {% if is_granted('ROLE_DOCTOR') %}
+                                               <td class="edit">
+                                                   {% if appointement.status.value == 'pending' %}
+                                                       <a href="{{ path('update_appointment', {id: appointement.id, action: 'yes'}) }}">Yes</a>
+                                                       <a href="{{ path('update_appointment', {id: appointement.id, action: 'no'}) }}">No</a>
+                                                   {% endif %}
+                                               </td>
+                                           {% endif %}
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

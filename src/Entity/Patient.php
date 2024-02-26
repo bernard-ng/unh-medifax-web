@@ -21,7 +21,10 @@ class Patient extends User
 
     public function __construct()
     {
+        parent::__construct();
+        $this->roles = ['ROLE_USER', 'ROLE_PATIENT'];
         $this->appointments = new ArrayCollection();
+        $this->subscription = Subscription::FREE;
     }
 
     public function getSubscription(): ?Subscription

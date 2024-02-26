@@ -1,0 +1,2062 @@
+@media (min-width: 1400px)and (max-width: 1600px) {
+    .helpline::after {
+        width: 60px;
+        height: 60px;
+        top: 3%;
+    }
+
+    .comment_text {
+        width: 86%;
+    }
+
+    .banner::after {
+        width: 80px;
+        height: 80px;
+        top: 15%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.99px) {
+
+    /*================================
+        HOME PAGE START
+    ================================*/
+    .banner_img .img {
+        height: 650px;
+    }
+
+    .banner_img::after {
+        width: 510px;
+        height: 510px;
+        right: 30px;
+        top: 260px;
+    }
+
+    .banner_text h1 {
+        font-size: 52px;
+    }
+
+    .call {
+        top: 350px;
+        left: 5px;
+    }
+
+    .video_call {
+        top: 255px;
+    }
+
+    .react {
+        top: 430px;
+        right: 0px;
+    }
+
+    .banner .review {
+        top: 525px;
+    }
+
+    .banner::after {
+        width: 60px;
+        height: 60px;
+        top: 17%;
+    }
+
+    .review::after {
+        bottom: 5%;
+    }
+
+    .about_img::after {
+        right: 25px;
+    }
+
+    .service_img {
+        height: 200px;
+    }
+
+    .faq_img {
+        height: 480px;
+        margin-left: 0;
+    }
+
+    .work_process_area::after {
+        width: 840px;
+        height: 53px;
+    }
+
+    .helpline::after {
+        top: 10%;
+        left: auto;
+        right: 5%;
+    }
+
+    .common_heading h2 {
+        font-size: 42px;
+    }
+
+    .helpline_contact li {
+        margin-right: 20px;
+        padding: 15px;
+    }
+
+    .helpline_contact li span {
+        margin-right: 10px;
+    }
+
+    .helpline_img {
+        margin-top: 110px;
+        height: 380px;
+    }
+
+    .about_img_2 {
+        right: 35px;
+    }
+
+    .helpline_img::after {
+        width: 160px;
+        height: 122px;
+        top: -40px;
+        left: 45px;
+    }
+
+    .team_img {
+        height: 270px;
+    }
+
+    .tf_footer_icon ul li a {
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .footer_mail span,
+    .tf_footer_icon span {
+        min-width: 75px;
+    }
+
+    .blog_text .blog_heading {
+        font-size: 22px;
+    }
+
+    /*================================
+        HOME PAGE END
+    ================================*/
+
+    .appointment_page_img {
+        width: 450px;
+        max-height: 600px;
+    }
+
+    /*================================
+        BLOG DETAILS START
+    ================================*/
+    .blog_details_img {
+        height: 475px;
+    }
+
+    .comment_text {
+        width: 80%;
+    }
+
+    .commant_reply .comment_text {
+        width: 76%;
+    }
+
+    .recent_post_text {
+        width: 56%;
+    }
+
+    .recent_post_text p {
+        font-size: 14px;
+    }
+
+    .recent_post_text a {
+        font-size: 16px;
+    }
+
+    .service_dtls_rightside {
+        padding: 20px;
+    }
+
+    .breadcrumb {
+        padding: 220px 0px 115px;
+    }
+
+    .breadcrumb_text h1 {
+        font-size: 48px;
+    }
+
+    /*================================
+        BLOG DETAILS END
+    ================================*/
+
+    .error_img {
+        height: 480px;
+    }
+
+    .error_text h3 {
+        font-size: 42px;
+    }
+
+    .faq_page_qus h3 {
+        font-size: 32px;
+    }
+
+    .single_payment {
+        height: 100px;
+    }
+
+    /*================================
+        DASHBOARD START
+    ================================*/
+    .dashboard_overview .text {
+        width: 68%;
+    }
+
+    .user_profile p {
+        font-size: 14px;
+    }
+
+    .dashboard_overview .icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .massager_option .nav-link {
+        padding: 5px;
+    }
+
+    .single_chat_top .text {
+        width: 86%;
+    }
+
+    .single_massage_text h4 {
+        font-size: 14px;
+    }
+
+    /*================================
+        DASHBOARD END
+    ================================*/
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.99px) {
+
+    /*================================
+        HOME PAGE START
+    ================================*/
+    .banner_text h1 {
+        font-size: 38px;
+    }
+
+    .banner_text p {
+        max-width: 80%;
+    }
+
+    .banner_counter li {
+        margin-right: 0;
+        min-width: 150px;
+    }
+
+    .banner_img .img {
+        height: 550px;
+    }
+
+    .banner_img::after {
+        width: 420px;
+        height: 420px;
+        top: 280px;
+        right: auto;
+        left: 0;
+    }
+
+    .call {
+        left: -15px;
+    }
+
+    .react {
+        top: 410px;
+        right: 5px;
+    }
+
+    .video_call {
+        top: 245px;
+        right: 165px;
+    }
+
+    .banner .review {
+        top: 530px;
+        left: -110px;
+        width: 125px !important;
+        height: 65px !important;
+    }
+
+    .banner_counter li h3,
+    .banner_counter li span {
+        font-size: 24px;
+    }
+
+    .banner_counter li p {
+        font-size: 13px;
+    }
+
+    .banner::after {
+        width: 65px;
+        height: 65px;
+        top: 17%;
+        left: 5%;
+    }
+
+    .main_menu .navbar-nav .nav-item>a {
+        padding: 0px 10px;
+    }
+
+    .about_img_1 {
+        width: 320px;
+        height: 370px;
+    }
+
+    .about_img_2 {
+        width: 260px;
+        height: 300px;
+        bottom: -140px;
+        right: 0;
+    }
+
+    .about_img::after {
+        display: none;
+    }
+
+    .service_img {
+        height: 200px;
+    }
+
+    .common_heading h2 {
+        font-size: 36px;
+    }
+
+    .faq_accordion .accordion-header .accordion-button {
+        font-size: 15px;
+    }
+
+    .single_process h4 {
+        font-size: 18px;
+    }
+
+    .work_process_area::after {
+        width: 728px;
+        height: 47px;
+    }
+
+    .appoinment_overlay {
+        padding: 30px;
+    }
+
+    .appoinment_img {
+        right: 0;
+        height: 540px;
+    }
+
+    .helpline_contact li {
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .helpline_contact li {
+        margin-right: 18px;
+        padding: 15px;
+    }
+
+    .helpline_contact_text a {
+        font-size: 14px;
+    }
+
+    .helpline_contact li span {
+        margin-right: 10px;
+    }
+
+    .helpline_contact_text p {
+        font-size: 14px;
+    }
+
+    .massage_shape {
+        width: 130px;
+        height: 100px;
+        top: 215px;
+        right: 30%;
+    }
+
+
+    .helpline::after {
+        top: 10%;
+        left: auto;
+        right: 10%;
+    }
+
+    .helpline_img {
+        margin-top: 185px;
+        height: 317px;
+    }
+
+    .helpline::before {
+        top: 47%;
+        left: 38%;
+    }
+
+    .review::after {
+        bottom: 5%;
+    }
+
+    .blog_text .blog_heading {
+        font-size: 20px;
+    }
+
+    .blog_img {
+        height: 200px;
+    }
+
+    .footer_mail span,
+    .tf_footer_icon span {
+        font-size: 14px;
+        min-width: 70px;
+    }
+
+    .footer_mail a {
+        font-size: 14px;
+    }
+
+    .tf_footer_icon ul li a {
+        font-size: 14px;
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .quick_link ul li a {
+        font-size: 14px;
+    }
+
+    .footer_left p,
+    .tf_footer_address p,
+    .tf_footer_address a {
+        font-size: 14px;
+    }
+
+    .quick_link h5,
+    .address h5 {
+        font-size: 18px;
+    }
+
+    .faq_img {
+        height: 485px;
+        margin-left: 0;
+    }
+
+    .helpline_img::after {
+        width: 150px;
+        height: 115px;
+        top: -50px;
+        left: 25px;
+    }
+
+    .team_img {
+        height: 280px;
+    }
+
+    /*================================
+        HOME PAGE END
+    ================================*/
+
+    .breadcrumb {
+        padding: 220px 0px 115px;
+    }
+
+    /*================================
+        APPOINTMENT PAGE START
+    ================================*/
+    .appointment_page_img {
+        width: 430px;
+        max-height: 560px;
+    }
+
+    /*================================
+        APPOINTMENT PAGE END
+    ================================*/
+
+
+    /*================================
+        BLOG DETAILS START
+    ================================*/
+    .blog_details_img {
+        height: 350px;
+    }
+
+    .blog_details_text .details_title {
+        font-size: 32px;
+    }
+
+    .comment_text {
+        width: 80%;
+    }
+
+    .commant_reply .comment_text {
+        width: 76%;
+    }
+
+    .recent_post_text {
+        width: 59%;
+    }
+
+    .recent_post_text a {
+        font-size: 16px;
+    }
+
+    /*================================
+        BLOG DETAILS END
+    ================================*/
+
+    .team_details_img {
+        height: 320px;
+    }
+
+    .error_img {
+        height: 545px;
+    }
+
+    .faq_page_qus h3 {
+        font-size: 32px;
+    }
+
+    .gallary_img1,
+    .gallary_img3 {
+        height: 300px;
+    }
+
+    .gallary_img2 {
+        height: 625px;
+    }
+
+    .single_payment {
+        height: auto;
+    }
+
+    .service_dstails_img {
+        height: 350px;
+    }
+
+    /*================================
+        DASHBOARD START
+    ================================*/
+    .dashboard_overview .text {
+        width: 68%;
+    }
+
+    .message_list {
+        height: 400px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+
+    .chating_text {
+        max-width: 76%;
+    }
+
+    .single_chat_top .text {
+        width: 87%;
+        position: relative;
+    }
+
+    .single_chat_body {
+        height: 400px;
+    }
+
+    /*================================
+        DASHBOARD END
+    ================================*/
+
+    .blog_react li {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .blog_text {
+        padding: 25px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+
+    /*================================
+        HOME PAGE START
+    ================================*/
+    .topbar_icon {
+        justify-content: center;
+    }
+
+    .main_menu .container {
+        padding: 7px 0px;
+    }
+
+    .main_menu .navbar-brand {
+        margin-left: 12px;
+    }
+
+    .main_menu .navbar-nav {
+        background: var(--colorWhite);
+        padding-top: 15px;
+    }
+
+    #navbarSupportedContent {
+        margin-top: 13px;
+        border-top: 1px solid var(--colorPrimary);
+    }
+
+    .main_menu .navbar-nav .nav-item>a {
+        line-height: 55px;
+        text-align: center;
+    }
+
+    .menu_btn {
+        background: var(--colorWhite);
+        justify-content: center;
+        padding: 10px 0px 30px 0px;
+        border-bottom: 1px solid var(--colorPrimary);
+    }
+
+    .dropdown {
+        max-height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    .menu_search form input {
+        padding: 14px 170px 18px 20px;
+    }
+
+    .banner::after {
+        display: none;
+    }
+
+    .banner_text h1 {
+        font-size: 42px;
+    }
+
+    .banner {
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .banner_counter {
+        margin-top: 60px;
+    }
+
+    .banner_counter li h3,
+    .banner_counter li span {
+        font-size: 32px;
+    }
+
+    .banner_counter li p {
+        font-size: 16px;
+    }
+
+    .banner_img .img {
+        height: 560px;
+    }
+
+    .banner_img::after {
+        width: 450px;
+        height: 450px;
+        top: 0;
+        right: auto;
+        left: 0;
+    }
+
+    .banner_img {
+        justify-content: start;
+        align-items: start;
+        margin-top: 60px;
+    }
+
+    .banner .react,
+    .banner .video_call,
+    .banner .call,
+    .banner .review {
+        display: none;
+    }
+
+    .about_img_1 {
+        width: 300px;
+        height: 310px;
+    }
+
+    .about_img::after {
+        display: none;
+    }
+
+    .about_img_2 {
+        width: 220px;
+        height: 250px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .about_img {
+        padding-bottom: 50px;
+        margin-bottom: 30px;
+    }
+
+    .common_heading h2 {
+        font-size: 36px;
+    }
+
+    .service_img {
+        height: 200px;
+    }
+
+    .faq_img {
+        height: auto;
+        margin-left: 0;
+    }
+
+    .work_process_area::after {
+        display: none;
+    }
+
+    .appoinment_img {
+        display: none;
+    }
+
+    .massage_shape,
+    .helpline::after,
+    .helpline::before {
+        display: none;
+    }
+
+    .appoinment_overlay {
+        padding: 30px;
+    }
+
+    .helpline_contact li {
+        margin-bottom: 15px;
+    }
+
+    .helpline_img {
+        margin-top: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    .review::before,
+    .review::after {
+        display: none;
+    }
+
+    .blog_text {
+        padding: 20px;
+    }
+
+    .subscribe_text h2 {
+        margin-bottom: 20px;
+    }
+
+    .quick_link,
+    .address {
+        margin-top: 50px;
+    }
+
+    .faq::before,
+    .faq::after {
+        display: none;
+    }
+
+    .faq_accordion .accordion-header .accordion-button {
+        font-size: 16px;
+    }
+
+    .appoinment {
+        padding-top: 100px !important;
+    }
+
+    .blog_text .blog_heading {
+        font-size: 22px;
+    }
+
+    .topbar_link {
+        justify-content: center;
+    }
+
+    .topbar_link li p {
+        margin-right: 0;
+    }
+
+    .helpline_img::after {
+        width: 125px;
+        height: 96px;
+        top: 15px;
+        left: 130px;
+    }
+
+    /*================================
+        HOME PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .breadcrumb_text h1 {
+        font-size: 36px;
+    }
+
+    .breadcrumb {
+        padding: 200px 0px 90px;
+    }
+
+    .single_counter {
+        margin-bottom: 35px;
+        border: none;
+    }
+
+    .about_counter_bg {
+        padding: 35px 0px;
+        padding-bottom: 0;
+    }
+
+    .breadcrumb_text ul li a::after {
+        top: 5px;
+    }
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
+
+
+    /*================================
+        APPOINTMENT PAGE START
+    ================================*/
+    .appointment_page_img {
+        display: none;
+    }
+
+    .appointment_page_text form h2 {
+        font-size: 28px;
+    }
+
+    /*================================
+        APPOINTMENT PAGE END
+    ================================*/
+
+
+    /*================================
+        BLOG DETAILS START
+    ================================*/
+    .blog_details_img {
+        height: 400px;
+    }
+
+    .blog_details_header_left li {
+        margin-bottom: 15px;
+    }
+
+    .comment_text {
+        width: 82%;
+    }
+
+    .comment_text h4 span {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .comment_input_area {
+        margin-bottom: 30px;
+    }
+
+    .recent_post_text {
+        width: 85%;
+    }
+
+    .blog_details_text .details_title {
+        font-size: 30px;
+    }
+
+    .commant_reply .comment_text {
+        width: 79%;
+    }
+
+    /*================================
+        BLOG DETAILS END
+    ================================*/
+
+    .contact_img {
+        margin-bottom: 30px;
+    }
+
+    .tf_contact_map {
+        height: 400px;
+    }
+
+    .contact_address {
+        padding: 25px;
+    }
+
+
+    .error_img {
+        height: 455px;
+    }
+
+    .error_text h3 {
+        font-size: 38px;
+    }
+
+    .faq_page_qus {
+        margin-bottom: 30px;
+    }
+
+    .faq_page_qus h3 {
+        font-size: 38px;
+    }
+
+    .gallary_img1,
+    .gallary_img3 {
+        height: 335px;
+    }
+
+    .gallary_img2 {
+        height: 695px;
+    }
+
+    .service_search .select2-container--default .select2-selection--single {
+        margin-bottom: 10px;
+    }
+
+    .service_page form {
+        padding-bottom: 10px;
+    }
+
+    .service_dstails_img {
+        height: 400px;
+    }
+
+    /*================================
+        DASHBOARD START
+    ================================*/
+    .dashboard_content {
+        margin-top: 30px;
+    }
+
+    .dashboard_overview .text {
+        width: 72%;
+    }
+
+    .dashboard_content h5 {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    .single_chat_top .text {
+        width: 89%;
+    }
+
+    .message_list {
+        height: 400px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+
+    .single_chat_body {
+        height: 450px;
+    }
+
+    .chating_text {
+        max-width: 79%;
+    }
+
+    /*================================
+        DASHBOARD END
+    ================================*/
+
+    .subscription {
+        border-radius: 30px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+
+    /*================================
+        HOME PAGE START
+    ================================*/
+    .topbar_icon {
+        justify-content: center;
+    }
+
+    .main_menu .container {
+        padding: 7px 0px;
+    }
+
+    .main_menu .navbar-brand {
+        margin-left: 12px;
+    }
+
+    .main_menu .navbar-nav {
+        background: var(--colorWhite);
+        padding-top: 15px;
+    }
+
+    #navbarSupportedContent {
+        margin-top: 13px;
+        border-top: 1px solid var(--colorPrimary);
+    }
+
+    .main_menu .navbar-nav .nav-item>a {
+        line-height: 55px;
+        text-align: center;
+    }
+
+    .menu_btn {
+        background: var(--colorWhite);
+        justify-content: center;
+        padding: 10px 0px 30px 0px;
+        border-bottom: 1px solid var(--colorPrimary);
+    }
+
+    .menu_search form {
+        width: 460px;
+    }
+
+    .dropdown {
+        max-height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    .menu_search form input {
+        padding: 14px 170px 18px 20px;
+    }
+
+    .banner::after {
+        display: none;
+    }
+
+    .banner_text h1 {
+        font-size: 42px;
+    }
+
+    .banner {
+        height: auto;
+        padding-top: 70px;
+    }
+
+    .banner_counter {
+        margin-top: 60px;
+    }
+
+    .banner_counter li h3,
+    .banner_counter li span {
+        font-size: 32px;
+    }
+
+    .banner_counter li p {
+        font-size: 16px;
+    }
+
+    .banner_img .img {
+        height: 450px;
+    }
+
+    .banner_img::after {
+        width: 360px;
+        height: 360px;
+        top: 0;
+        right: auto;
+        left: 0;
+    }
+
+    .banner_img {
+        justify-content: start;
+        align-items: start;
+        margin-top: 60px;
+    }
+
+    .banner .react,
+    .banner .video_call,
+    .banner .call,
+    .banner .review {
+        display: none;
+    }
+
+    .about_img_1 {
+        width: 300px;
+        height: 310px;
+    }
+
+    .about_img::after {
+        display: none;
+    }
+
+    .about_img_2 {
+        width: 220px;
+        height: 250px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .about_img {
+        padding-bottom: 50px;
+        margin-bottom: 30px;
+    }
+
+    .common_heading h2 {
+        font-size: 28px;
+    }
+
+    .service_img {
+        height: 150px;
+    }
+
+    .faq_img {
+        height: auto;
+        margin-left: 0;
+    }
+
+    .work_process_area::after {
+        display: none;
+    }
+
+    .appoinment_img {
+        display: none;
+    }
+
+    .massage_shape,
+    .helpline::after,
+    .helpline::before {
+        display: none;
+    }
+
+    .appoinment_overlay {
+        padding: 30px;
+    }
+
+    .helpline_contact li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .helpline_img {
+        margin-top: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    .team_img {
+        height: 230px;
+    }
+
+    .review::before,
+    .review::after {
+        display: none;
+    }
+
+    .blog_img {
+        height: 280px;
+    }
+
+    .subscription {
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .subscribe_text h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .quick_link,
+    .address {
+        margin-top: 50px;
+    }
+
+    .copyright ul {
+        margin-top: 15px;
+    }
+
+    .copyright ul li a {
+        margin-left: 0;
+        margin-right: 25px;
+        margin-top: 5px;
+    }
+
+    .faq::before,
+    .faq::after {
+        display: none;
+    }
+
+    .service_heading {
+        font-size: 18px;
+    }
+
+    .faq_accordion .accordion-header .accordion-button {
+        font-size: 16px;
+    }
+
+    .helpline_img::after {
+        display: none;
+    }
+
+    footer .sm_margin {
+        margin-top: 65px !important;
+    }
+
+    /*================================
+        HOME PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .breadcrumb_text h1 {
+        font-size: 36px;
+    }
+
+    .breadcrumb {
+        padding: 200px 0px 90px;
+    }
+
+    .single_counter {
+        margin-bottom: 35px;
+        border: none;
+    }
+
+    .about_counter_bg {
+        padding: 35px 0px;
+        padding-bottom: 0;
+    }
+
+    .breadcrumb_text ul li a::after {
+        top: 5px;
+    }
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
+
+
+    /*================================
+        APPOINTMENT PAGE START
+    ================================*/
+    .appointment_page_img {
+        display: none;
+    }
+
+    .appointment_page_text form h2 {
+        font-size: 28px;
+    }
+
+    /*================================
+        APPOINTMENT PAGE END
+    ================================*/
+
+    .become_doctor_heading {
+        font-size: 32px;
+    }
+
+    /*================================
+        BLOG DETAILS START
+    ================================*/
+    .blog_details_img {
+        height: 300px;
+    }
+
+    .blog_details_header_left {
+        width: 100%;
+    }
+
+    .blog_details_header_left li {
+        margin-bottom: 15px;
+    }
+
+    .blog_details_header_right li {
+        margin-left: 0;
+        margin-right: 25px;
+    }
+
+    .blog_details_text .details_title {
+        font-size: 24px;
+    }
+
+    .blog_details_text ul li::after,
+    .blog_details_text ol li::after {
+        top: 6px;
+    }
+
+    .blog_details_text .details_quot_text {
+        padding: 20px;
+    }
+
+    .blog_details_share .tags a {
+        margin-bottom: 10px;
+    }
+
+    .comment_text {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .comment_text h4 span {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .commant_reply {
+        margin-left: 40px;
+    }
+
+    .comment_input_area {
+        margin-bottom: 30px;
+    }
+
+    .recent_post_text {
+        width: 79%;
+    }
+
+    /*================================
+        BLOG DETAILS END
+    ================================*/
+
+    .contact_img {
+        margin-bottom: 30px;
+    }
+
+    .tf_contact_map {
+        height: 350px;
+    }
+
+    .team_details_img {
+        height: 530px;
+        margin-bottom: 30px;
+    }
+
+    .commant_reply .comment_text {
+        width: 100%;
+    }
+
+    .error_img {
+        height: 375px;
+    }
+
+    .error_text h3 {
+        font-size: 32px;
+    }
+
+    .faq_page_qus h3 {
+        font-size: 38px;
+    }
+
+    .faq_page_qus {
+        margin-bottom: 30px;
+    }
+
+    .gallary_img1 {
+        height: auto;
+    }
+
+    .gallary_img2 {
+        height: auto;
+    }
+
+    .payment .modal .modal-dialog {
+        max-width: 90%;
+    }
+
+    .service_search .select2-container--default .select2-selection--single {
+        margin-bottom: 10px;
+    }
+
+    .service_page form {
+        padding-bottom: 10px;
+    }
+
+    .service_dstails_img {
+        height: 300px;
+    }
+
+    /*================================
+        DASHBOARD START
+    ================================*/
+    .dashboard_content {
+        margin-top: 30px;
+    }
+
+    .dashboard_overview .text {
+        width: 83%;
+    }
+
+    .dashboard_content h5 {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    .message_list {
+        height: 400px;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+
+    .chating_text {
+        max-width: 75%;
+        margin-left: 10px;
+    }
+
+    .chat_name h4 {
+        font-size: 16px;
+    }
+
+    .tf_chat_right .chating_text {
+        margin-right: 10px;
+    }
+
+    .single_chat_body {
+        height: 400px;
+    }
+
+    .single_massage_text {
+        width: 78%;
+    }
+
+    .massager_option .nav-link {
+        max-height: 80px;
+    }
+
+    .single_chat_top .text {
+        width: 85%;
+    }
+
+    .single_payment {
+        height: 90px;
+    }
+
+    /*================================
+        DASHBOARD END
+    ================================*/
+}
+
+
+@media (max-width: 575.99px) {
+
+    /*================================
+        HOME PAGE START
+    ================================*/
+    .topbar_icon {
+        justify-content: center;
+    }
+
+    .main_menu .container {
+        padding: 7px 0px;
+    }
+
+    .main_menu .navbar-brand {
+        margin-left: 12px;
+    }
+
+    .main_menu .navbar-nav {
+        background: var(--colorWhite);
+        padding-top: 15px;
+    }
+
+    #navbarSupportedContent {
+        margin-top: 13px;
+        border-top: 1px solid var(--colorPrimary);
+    }
+
+    .main_menu .navbar-nav .nav-item>a {
+        line-height: 55px;
+        text-align: center;
+    }
+
+    .menu_btn {
+        background: var(--colorWhite);
+        justify-content: center;
+        padding: 10px 0px 30px 0px;
+        border-bottom: 1px solid var(--colorPrimary);
+    }
+
+    .menu_search form {
+        width: 300px;
+    }
+
+    .dropdown {
+        max-height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    .menu_search form input {
+        padding: 14px 125px 18px 20px;
+    }
+
+    .menu_search form button {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .banner::after {
+        display: none;
+    }
+
+    .banner_text h1 {
+        font-size: 36px;
+    }
+
+    .banner_text h5 {
+        font-size: 16px;
+    }
+
+    .banner {
+        height: auto;
+        padding-top: 70px;
+    }
+
+    .banner_counter {
+        margin-top: 40px;
+    }
+
+    .banner_counter li h3,
+    .banner_counter li span {
+        font-size: 32px;
+    }
+
+    .banner_counter li p {
+        font-size: 16px;
+    }
+
+    .banner_counter li {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .banner_img .img {
+        height: 370px;
+    }
+
+    .banner_img::after {
+        width: 300px;
+        height: 300px;
+        top: 0;
+        right: auto;
+        left: 0;
+    }
+
+    .banner_img {
+        justify-content: start;
+        align-items: start;
+        margin-top: 60px;
+    }
+
+    .banner .react,
+    .banner .video_call,
+    .banner .call,
+    .banner .review {
+        display: none;
+    }
+
+    .about_img_1 {
+        width: 270px;
+        height: 240px;
+    }
+
+    .about_img::after {
+        display: none;
+    }
+
+    .about_img_2 {
+        width: 215px;
+        height: 250px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .about_img {
+        padding-bottom: 100px;
+        margin-bottom: 30px;
+    }
+
+    .common_heading h2 {
+        font-size: 24px;
+    }
+
+    .about_iteam li {
+        width: 100%;
+    }
+
+    .service_img {
+        height: 200px;
+    }
+
+    .faq_img {
+        height: auto;
+        margin-left: 0;
+    }
+
+    .work_process_area::after {
+        display: none;
+    }
+
+    .appoinment_img {
+        display: none;
+    }
+
+    .massage_shape,
+    .helpline::after,
+    .helpline::before {
+        display: none;
+    }
+
+    .appoinment_overlay {
+        padding: 25px;
+    }
+
+    .helpline_contact li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .helpline_img {
+        margin-top: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    .helpline_img::after {
+        display: none;
+    }
+
+    .team_img {
+        height: 290px;
+    }
+
+    .single_review::after {
+        bottom: auto;
+        top: 20px;
+    }
+
+    .review::before,
+    .review::after {
+        display: none;
+    }
+
+    .blog_img {
+        height: 220px;
+    }
+
+    .blog_text {
+        padding: 20px;
+    }
+
+    .subscription {
+        padding: 25px;
+        border-radius: 30px;
+    }
+
+    .subscribe_text h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .subscrib_form .subscrib_btn {
+        position: static;
+        width: 100%;
+        background: var(--colorSecondary);
+        margin-top: 15px;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+
+    .quick_link,
+    .address {
+        margin-top: 50px;
+    }
+
+    .copyright ul {
+        margin-top: 15px;
+    }
+
+    .copyright ul li a {
+        margin-left: 0;
+        margin-right: 25px;
+        margin-top: 5px;
+    }
+
+    .faq::before,
+    .faq::after {
+        display: none;
+    }
+
+    .faq_accordion .accordion-header .accordion-button {
+        font-size: 16px;
+    }
+
+    .reviewer_info h3 {
+        font-size: 16px;
+    }
+
+    .reviewer_info span {
+        font-size: 14px;
+    }
+
+    .blog_text .blog_heading {
+        font-size: 22px;
+    }
+
+    /*================================
+        HOME PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .breadcrumb_text h1 {
+        font-size: 28px;
+    }
+
+    .breadcrumb_text ul li,
+    .breadcrumb_text ul li a {
+        font-size: 14px;
+    }
+
+    .breadcrumb_text ul li a::after {
+        font-size: 10px;
+        top: 4px;
+    }
+
+    .breadcrumb {
+        padding: 173px 0px 65px;
+    }
+
+    .single_counter {
+        margin-bottom: 35px;
+    }
+
+    .about_counter_bg {
+        padding: 35px 0px;
+        padding-bottom: 0;
+    }
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
+
+
+    /*================================
+        APPOINTMENT PAGE START
+    ================================*/
+    .appointment_page_img {
+        display: none;
+    }
+
+    .appointment_page_text form h2 {
+        font-size: 28px;
+    }
+
+    /*================================
+        APPOINTMENT PAGE END
+    ================================*/
+
+
+    /*================================
+        BECOME DOCTOR END
+    ================================*/
+    .become_doctor_contant {
+        border: 0;
+        padding: 0;
+    }
+
+    .become_doctor_heading {
+        font-size: 26px;
+    }
+
+    .become_doctor_text h1,
+    .become_doctor_text h2,
+    .become_doctor_text h3,
+    .become_doctor_form h2 {
+        font-size: 20px;
+    }
+
+    .become_doctor_text ul li::after,
+    .become_doctor_text ol li::after {
+        top: 5px;
+    }
+
+    .become_doctor_form {
+        padding: 20px;
+    }
+
+    /*================================
+        BECOME DOCTOR END
+    ================================*/
+
+
+    /*================================
+        BLOG DETAILS START
+    ================================*/
+    .blog_details_img {
+        height: auto;
+    }
+
+    .blog_details_header_left li {
+        margin-bottom: 15px;
+    }
+
+    .blog_details_header_right li {
+        margin-left: 0;
+        margin-right: 25px;
+    }
+
+    .blog_details_text .details_title {
+        font-size: 24px;
+    }
+
+    .blog_details_text ul li::after,
+    .blog_details_text ol li::after {
+        top: 6px;
+    }
+
+    .blog_details_text .details_quot_text {
+        padding: 20px;
+    }
+
+    .blog_details_share .tags a {
+        margin-bottom: 10px;
+    }
+
+    .comment_area {
+        padding: 20px;
+    }
+
+    .comment_area h2 {
+        font-size: 20px;
+    }
+
+    .comment_text {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .comment_text h4 span {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .commant_reply {
+        margin-left: 20px;
+    }
+
+    .comment_input_area {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .comment_input_area input {
+        margin-bottom: 20px;
+    }
+
+    .service_dtls_rightside {
+        padding: 20px;
+    }
+
+    .recent_post_text {
+        width: 62%;
+    }
+
+    .blog_details_header_left {
+        width: 100%;
+    }
+
+    /*================================
+        BLOG DETAILS END
+    ================================*/
+
+    .contact_img {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .tf_contact_map {
+        height: 300px;
+    }
+
+    .contact_address {
+        padding: 20px;
+    }
+
+    .team_details_img {
+        margin-bottom: 30px;
+    }
+
+    .team_details_img_text h3 {
+        margin-bottom: 20px;
+    }
+
+    .commant_reply .comment_text {
+        width: 100%;
+    }
+
+    .error_img {
+        height: auto;
+    }
+
+    .error_text h3 {
+        font-size: 36px;
+    }
+
+    .faq_page_qus h3 {
+        font-size: 32px;
+    }
+
+    .faq_page_qus {
+        margin-bottom: 30px;
+    }
+
+    .sign_up_form {
+        padding: 30px;
+    }
+
+    .sign_option li {
+        width: 48%;
+    }
+
+    .sign_option li a {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .signup_check_area a {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .sign_up_logo {
+        width: 150px;
+    }
+
+    .gallary_img1 {
+        height: auto;
+    }
+
+    .gallary_img2 {
+        height: auto;
+    }
+
+    .single_payment {
+        height: auto;
+    }
+
+    .payment .modal .modal-dialog {
+        max-width: 95%;
+    }
+
+    .service_search .select2-container--default .select2-selection--single {
+        margin-bottom: 10px;
+    }
+
+    .service_dstails_img {
+        height: auto;
+    }
+
+    .tf_service_pdf_link li {
+        width: 100%;
+    }
+
+    /*================================
+        DASHBOARD START
+    ================================*/
+    .dashboard_content {
+        margin-top: 30px;
+    }
+
+    .dashboard_overview .text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .dashboard_content h5 {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    .message_list {
+        height: 400px;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+
+    .single_chat_top_right {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .chating_text {
+        max-width: 75%;
+        margin-left: 10px;
+    }
+
+    .single_chat_top {
+        padding: 10px;
+    }
+
+    .chat_name h4 {
+        font-size: 16px;
+    }
+
+    .tf_chat_right .chating_text {
+        margin-right: 10px;
+    }
+
+    .single_chat_body {
+        padding: 10px;
+        height: 400px;
+    }
+
+    .single_chat_bottom label {
+        left: 10px;
+    }
+
+    .massage_btn {
+        right: 10px;
+    }
+
+    .single_chat_top .text {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .single_chat_top .text a {
+        top: 12px;
+    }
+
+    /*================================
+        DASHBOARD END
+    ================================*/
+}

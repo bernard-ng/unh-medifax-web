@@ -1,0 +1,79 @@
+<footer style="background: url(/images/footer_bg.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 wow fadeInUp" data-wow-duration="1s">
+                <div class="subscription">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-xxl-6 col-lg-6 col-xl-7">
+                            <div class="subscribe_text">
+                                <h2>Subscribe for the Exclusive Updates!</h2>
+                            </div>
+                        </div>
+                        <div class="col-xxl-5 col-lg-6 col-xl-5">
+                            <form action="index.html#" class="subscrib_form">
+                                <input type="text" placeholder="your Email Address">
+                                <button class="common_btn subscrib_btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt_10">
+            <div class="col-lg-6 col-sm-9 col-md-6">
+                <div class="footer_left">
+                    <a href="{{ path('app_index') }}" class="tf_footer_logo">
+                        <img src="images/footer_logo.png" alt="MediFax" class="img-fluid w-100">
+                    </a>
+                    <p>There are to popular belie Lorem is Ipsum
+                        is not simply random.</p>
+                    <div class="footer_mail">
+                        <span>Hello to :</span>
+                        <a href="{{ path('app_index') }}#">support@gmail.com</a>
+                    </div>
+                    <div class="tf_footer_icon d-flex flex-wrap align-items-center">
+                        <span>Follow :</span>
+                        <ul class="d-flex flex-wrap">
+                            <li><a href="{{ path('app_index') }}#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{ path('app_index') }}#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{ path('app_index') }}#"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="{{ path('app_index') }}#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 order-md-2">
+                <div class="address">
+                    <h5>Official Info</h5>
+                    <div class="tf_footer_address">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            2767 Sunrise Street, NY 1002, USA
+                        </p>
+                        <a href="{{ path('app_index') }}#">
+                            <i class="fas fa-envelope"></i>
+                            company@gmail.com
+                        </a>
+                        <a href="{{ path('app_index') }}#">
+                            <i class="fas fa-phone-alt"></i>
+                            +965548547564
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt_70 xs_mt_45 sm_margin ">
+            <div class="col-xl-12">
+                <div class="copyright d-flex flex-wrap justify-content-between">
+                    <p>{{ 'now' | date('Y') }} MadiFax. All rights reserved.</p>
+                    <ul class="d-flex flex-wrap">
+                        <li><a href="{{ path('app_index') }}#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>

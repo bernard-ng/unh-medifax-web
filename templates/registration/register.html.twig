@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <section class="mt_60 sign_up pt_100 xs_pt_70 pb_100 xs_pb_70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-md-9 col-lg-6 wow fadeInUp" data-wow-duration="1s">
+                    {{ form_errors(registrationForm) }}
+                    {% for flash_error in app.flashes('verify_email_error') %}
+                        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                    {% endfor %}
+
+                    {{ form_start(registrationForm, {attr: {class: 'sign_up_form'}}) }}
+                        <a href="{{ path('app_index') }}" class="sign_up_logo">
+                            <img src="images/footer_logo.png" alt="logo" class="img-fluid w-100">
+                        </a>
+                        {{ form_row(registrationForm.fullName) }}
+                        {{ form_row(registrationForm.email) }}
+                        {{ form_row(registrationForm.plainPassword, {
+                            label: 'Password'
+                        }) }}
+
+                    <button class="common_btn w-100" type="submit">Sign Up</button>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

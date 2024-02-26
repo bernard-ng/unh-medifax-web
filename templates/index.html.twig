@@ -1,1 +1,282 @@
 {% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="about mt_60 pt_100 xs_pt_70 pb_100 xs_pb_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-sm-9  col-lg-5 col-md-7 wow fadeInLeft" data-wow-duration="1s">
+                    <div class="about_img">
+                        <div class="about_img_1">
+                            <img src="images/about-img1.jpg" alt="about img" class="img-fluid w-100">
+                        </div>
+                        <div class="about_img_2">
+                            <img src="images/about_img2.jpg" alt="about img" class="img-fluid w-100">
+                            <a class="play_btn venobox" data-autoplay="true" data-vbtype="video"
+                               href="https://youtu.be/nqye02H_H6I">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-sm-12 col-lg-7  wow fadeInRight" data-wow-duration="1s">
+                    <div class="common_heading">
+                        <h5>about us</h5>
+                        <h2>The Great Place of Medical Hospital Center.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Quis ipsum susp endisse ultrices gravida tempor incididu
+                            ut labore et dolore magna aliqua. Quis ipsum susp endisse ultrices gravida.</p>
+                    </div>
+
+                    <ul class="about_iteam d-flex flex-wrap">
+                        <li>Ambulance Services</li>
+                        <li>Oxizen on Wheel</li>
+                        <li>Pharmacy on Clinic</li>
+                        <li>On duty Doctors</li>
+                        <li>24/7 Medical Emergency</li>
+                    </ul>
+                    <a href="about.html" class="common_btn">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   {% if not is_granted('ROLE_DOCTOR') %}
+       <section id="appointment" class="review appoinment pt_185 xs_pt_70 pb_100 xs_pb_70">
+           <div class="container">
+               <div class="appoinment_bg" style="background: url(images/appointment_bg.jpg);">
+                   <div class="appoinment_overlay">
+                       <div class="row">
+                           <div class="col-xl-7 col-lg-7 wow fadeInLeft" data-wow-duration="1s">
+                               <div class="appoinment_form">
+                                   <div class="common_heading mb_30">
+                                       <h5>Appointment</h5>
+                                       <h2>Apply For Free Now</h2>
+                                   </div>
+
+                                   {{ form_start(form, {attr: {class: 'appoinment_form'}}) }}
+                                   <div class="row">
+                                       {{ form_row(form.doctor) }}
+                                       {{ form_row(form.date) }}
+                                       {{ form_row(form.description) }}
+
+                                       <div class="appoinment_form_input">
+                                           <button class="common_btn">book
+                                               appoinment</button>
+                                       </div>
+                                   </div>
+                                   {{ form_end(form) }}
+                               </div>
+                           </div>
+                           <div class="col-xl-4">
+                               <div class="appoinment_img">
+                                   <img src="images/appoinment_img.png" alt="appointment" class="img-fluid w-100">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+   {% endif %}
+
+    <section class="team pt_100 xs_pt_70 pb_100 xs_pb_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="common_heading center_heading mb_25">
+                        <h5>our team</h5>
+                        <h2>Meet Our expert doctor</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_team">
+                        <div class="team_img">
+                            <img src="images/team-1.jpg" alt="team" class="img-fluid w-100">
+                            <div class="team_overlay">
+                                <ul class="team_icon">
+                                    <li><a href="index.html#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_designation">
+                            <h6>Dr. Jon Miller</h6>
+                            <p>Neurology</p>
+                            <span>MBBS, FCPS, FRCS</span>
+                            <a href="doctor_details.html"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_team">
+                        <div class="team_img">
+                            <img src="images/team-2.jpg" alt="team" class="img-fluid w-100">
+                            <div class="team_overlay">
+                                <ul class="team_icon">
+                                    <li><a href="index.html#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_designation">
+                            <h6>Dr. Jon Miller</h6>
+                            <p>Cardiology</p>
+                            <span>MBBS, FCPS, FRCS</span>
+                            <a href="doctor_details.html"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_team">
+                        <div class="team_img">
+                            <img src="images/team-3.jpg" alt="team" class="img-fluid w-100">
+                            <div class="team_overlay">
+                                <ul class="team_icon">
+                                    <li><a href="index.html#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_designation">
+                            <h6>Dr. Jon Miller</h6>
+                            <p>Ophthalmology</p>
+                            <span>MBBS, FCPS, FRCS</span>
+                            <a href="doctor_details.html"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_team">
+                        <div class="team_img">
+                            <img src="images/team-4.jpg" alt="team" class="img-fluid w-100">
+                            <div class="team_overlay">
+                                <ul class="team_icon">
+                                    <li><a href="index.html#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team_designation">
+                            <h6>Dr. Jon Miller</h6>
+                            <p>Pediatric</p>
+                            <span>MBBS, FCPS, FRCS</span>
+                            <a href="doctor_details.html"><i class="fal fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt_40">
+                    <a class="common_btn" href="doctor.html">view more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review pt_100 xs_pt_70 pb_100 xs_pb_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="common_heading center_heading mb_45">
+                        <h5>Testimonials</h5>
+                        <h2>What Our Client Says</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row review_slider">
+                <div class="col-xl-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_review">
+                        <p class="review_icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p>“Lorem ipsum dolor sit amet, consectetur on pisc
+                            ing elit, sed do eiusmod tempor incidids is magna
+                            aliqua established fact”</p>
+                        <div class="reviewer_info">
+                            <div class="img">
+                                <img src="images/review-1.png" alt="reviewer" class="img-fluid w-100">
+                            </div>
+                            <h3>Jenny Wilson</h3>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_review">
+                        <p class="review_icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p>“Lorem ipsum dolor sit amet, consectetur on pisc
+                            ing elit, sed do eiusmod tempor incidids is magna
+                            aliqua established fact”</p>
+                        <div class="reviewer_info">
+                            <div class="img">
+                                <img src="images/review-2.png" alt="reviewer" class="img-fluid w-100">
+                            </div>
+                            <h3>Vlack Marvin</h3>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_review">
+                        <p class="review_icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p>“Lorem ipsum dolor sit amet, consectetur on pisc
+                            ing elit, sed do eiusmod tempor incidids is magna
+                            aliqua established fact”</p>
+                        <div class="reviewer_info">
+                            <div class="img">
+                                <img src="images/review-3.png" alt="reviewer" class="img-fluid w-100">
+                            </div>
+                            <h3>Robert Floxder</h3>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 wow fadeInUp" data-wow-duration="1s">
+                    <div class="single_review">
+                        <p class="review_icon">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p>“Lorem ipsum dolor sit amet, consectetur on pisc
+                            ing elit, sed do eiusmod tempor incidids is magna
+                            aliqua established fact”</p>
+                        <div class="reviewer_info">
+                            <div class="img">
+                                <img src="images/review-2.png" alt="reviewer" class="img-fluid w-100">
+                            </div>
+                            <h3>Vlack Marvin</h3>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

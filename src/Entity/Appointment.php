@@ -8,6 +8,7 @@ use App\Enum\AppointmentStatus;
 use App\Repository\AppointmentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AppointmentRepository::class)]
 class Appointment
@@ -35,7 +36,18 @@ class Appointment
     private ?AppointmentStatus $status = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[Assert\NotBlank]
     private ?string $description = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[Assert\GreaterThan('today')]
+    private ?\DateTimeInterface $date = null;
+
+    public function __construct()
+    {
+        $this->created_at = new \DateTimeImmutable();
+        $this->status = AppointmentStatus::PENDING;
+    }
 
     public function getId(): ?int
     {
@@ -110,6 +122,18 @@ class Appointment
     public function setDescription(?string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): static
+    {
+        $this->date = $date;
 
         return $this;
     }

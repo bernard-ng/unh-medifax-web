@@ -3,29 +3,27 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <section class="mt_60 sign_up pt_100 xs_pt_70 pb_100 xs_pb_70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-md-9 col-lg-6 wow fadeInUp" data-wow-duration="1s">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    <form method="post" class="sign_up_form">
+                        <a href="{{ path('app_index') }}" class="sign_up_logo">
+                            <img src="images/footer_logo.png" alt="logo" class="img-fluid w-100">
+                        </a>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                        <button class="common_btn w-100" type="submit">Register Now</button>
+                        <p class="tf_new_account">Don’t Have An Account? <a href="{{ path('app_register') }}">Sign Up</a></p>
+                    </form>
+                </div>
+            </div>
         </div>
-    {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
+    </section>
 {% endblock %}

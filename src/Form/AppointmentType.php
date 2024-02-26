@@ -11,6 +11,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EnumType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 /**
@@ -23,18 +24,26 @@ class AppointmentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('patient', EntityType::class, [
-                'class' => Patient::class,
-                'choice_label' => 'email',
-            ])
             ->add('doctor', EntityType::class, [
+                'label' => false,
                 'class' => Doctor::class,
-                'choice_label' => 'email',
+                'choice_label' => 'full_name',
+                'attr' => [
+                    'class' => 'appoinment_form_input'
+                ]
             ])
-            ->add('status', EnumType::class, [
-                'class' => AppointmentStatus::class
+            ->add('date', DateType::class, [
+                'label' => false,
+                'attr' => [
+                    'class' => 'appoinment_form_input'
+                ]
             ])
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, [
+                'label' => false,
+                'attr' => [
+                    'class' => 'appoinment_form_input'
+                ]
+            ])
         ;
     }
 

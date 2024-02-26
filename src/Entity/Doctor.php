@@ -24,6 +24,8 @@ class Doctor extends User
 
     public function __construct()
     {
+        parent::__construct();
+        $this->roles = ['ROLE_USER', 'ROLE_DOCTOR'];
         $this->appointments = new ArrayCollection();
     }
 

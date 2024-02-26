@@ -34,11 +34,11 @@ class AppointmentCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             AssociationField::new('doctor')->autocomplete(),
             AssociationField::new('patient')->autocomplete(),
-            DateTimeField::new('createdAt'),
+            DateTimeField::new('createdAt')->hideOnForm(),
+            DateTimeField::new('date'),
             TextEditorField::new('description'),
             ChoiceField::new('status')
                 ->setChoices(AppointmentStatus::cases())
-                ->setValue(AppointmentStatus::PENDING)
                 ->renderExpanded()
         ];
     }
