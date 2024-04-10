@@ -7,6 +7,8 @@ namespace App\Entity;
 use App\Enum\UserType;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
+use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -25,11 +27,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
     protected ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
     #[Assert\Email]
     #[Assert\NotBlank]
+    #[Groups(['read:collection', 'read:item'])]
     protected ?string $email = null;
 
     #[ORM\Column]
@@ -43,9 +47,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
+    #[Groups(['read:collection', 'read:item'])]
     protected ?string $full_name = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(['read:collection', 'read:item'])]
     protected ?string $phone_number = null;
 
     #[ORM\Column]
@@ -55,7 +61,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     protected ?\DateTimeImmutable $updated_at = null;
 
     #[ORM\Column(type: 'boolean')]
-    protected $isVerified = false;
+    protected bool $isVerified = false;
+
+    #[ORM\Column(length: 500, nullable: true)]
+    #[Groups(['read:collection', 'read:item'])]
+    private ?string $profileImage = "default";
 
     public function __construct()
     {
@@ -188,6 +198,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): static
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getProfileImage(): ?string
+    {
+        return $this->profileImage;
+    }
+
+    public function setProfileImage(?string $profileImage): static
+    {
+        $this->profileImage = $profileImage;
 
         return $this;
     }

@@ -8,6 +8,7 @@
 /var/
 /vendor/
 .idea/
+/public/uploads/
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###
@@ -24,3 +25,7 @@
 /public/assets/
 /assets/vendor
 ###< symfony/asset-mapper ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###

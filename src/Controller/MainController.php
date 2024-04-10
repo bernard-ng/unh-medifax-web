@@ -34,6 +34,10 @@ final class MainController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if ($data->getPatient() === null) {
+                return $this->redirectToRoute("login");
+            }
+
             $em->persist($data);
             $em->flush();
 

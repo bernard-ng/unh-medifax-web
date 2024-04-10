@@ -5,15 +5,26 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use App\Enum\Subscription;
+use ApiPlatform\Metadata\Get;
 use App\Repository\PatientRepository;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Groups;
+use App\Controller\API\GetPatientAppointements;
 
 #[ORM\Entity(repositoryClass: PatientRepository::class)]
+#[ApiResource(
+    operations: [
+        new Get(normalizationContext: ['groups' => ['read:item']])
+    ]
+)]
 class Patient extends User
 {
     #[ORM\Column(type: 'string', enumType: Subscription::class)]
+    #[Groups(['read:collection', 'read:item'])]
     private ?Subscription $subscription = null;
 
     #[ORM\OneToMany(mappedBy: 'patient', targetEntity: Appointment::class, orphanRemoval: true)]

@@ -4,19 +4,31 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\Get;
 use App\Repository\DoctorRepository;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Groups;
 
 #[ORM\Entity(repositoryClass: DoctorRepository::class)]
+#[ApiResource(
+    operations: [
+        new Get(normalizationContext: ['groups' => ['read:item']]),
+        new GetCollection(normalizationContext: ['groups' => ['read:collection']])
+    ]
+)]
 class Doctor extends User
 {
     #[ORM\ManyToOne(inversedBy: 'doctors')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['read:collection', 'read:item'])]
     private ?Specialization $specialization = null;
 
     #[ORM\Column]
+    #[Groups(['read:collection', 'read:item'])]
     private ?bool $is_available = null;
 
     #[ORM\OneToMany(mappedBy: 'doctor', targetEntity: Appointment::class, orphanRemoval: true)]

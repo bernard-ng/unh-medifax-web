@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Doctor;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
@@ -36,6 +37,10 @@ class DoctorCrudController extends AbstractCrudController
             EmailField::new('email'),
             TextField::new('fullName'),
             TelephoneField::new('phoneNumber'),
+            ImageField::new('profileImage')
+                ->setUploadedFileNamePattern('[contenthash].[extension]')
+                ->setUploadDir('/public/uploads/')
+                ->setBasePath('/uploads/'),
             AssociationField::new('specialization')->autocomplete(),
             BooleanField::new('isAvailable', 'Is available ?')
                 ->setRequired(false),

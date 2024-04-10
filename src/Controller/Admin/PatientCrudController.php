@@ -8,6 +8,7 @@ use App\Entity\Patient;
 use App\Enum\Subscription;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TelephoneField;
@@ -41,6 +42,10 @@ class PatientCrudController extends AbstractCrudController
             EmailField::new('email'),
             TextField::new('fullName'),
             TelephoneField::new('phoneNumber'),
+            ImageField::new('profileImage')
+                ->setUploadedFileNamePattern('[contenthash].[extension]')
+                ->setUploadDir('/public/uploads/')
+                ->setBasePath('/uploads/'),
             ChoiceField::new('Subscription')
                 ->renderExpanded()
                 ->setChoices(Subscription::cases()),

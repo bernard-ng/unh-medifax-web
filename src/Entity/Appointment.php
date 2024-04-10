@@ -4,26 +4,47 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\Post;
 use App\Enum\AppointmentStatus;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
 use App\Repository\AppointmentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Groups;
+use App\Controller\API\GetPatientAppointements;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AppointmentRepository::class)]
+#[ApiResource(operations: [
+    new GetCollection(
+        uriTemplate: '/appointments/patient/{id}',
+        controller: GetPatientAppointements::class,
+        openapiContext: [
+            "summary" => "Retrieves the collection of Appointment resources for a Patient.",
+        ],
+        normalizationContext: ['groups' => ['read:collection']],
+        read: false,
+        name: 'appointments'
+    ),
+    new Post(denormalizationContext: ['groups' => ['write:item']])
+])]
 class Appointment
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['read:collection', 'read:item'])]
     private ?int $id = null;
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
     private ?Patient $patient = null;
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
     private ?Doctor $doctor = null;
 
     #[ORM\Column]
@@ -33,14 +54,17 @@ class Appointment
     private ?\DateTimeImmutable $updated_at = null;
 
     #[ORM\Column(length: 255, enumType: AppointmentStatus::class)]
+    #[Groups(['read:collection', 'read:item'])]
     private ?AppointmentStatus $status = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     #[Assert\NotBlank]
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
     private ?string $description = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     #[Assert\GreaterThan('today')]
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
     private ?\DateTimeInterface $date = null;
 
     public function __construct()
