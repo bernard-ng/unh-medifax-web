@@ -46,7 +46,7 @@ final readonly class BeforeEntityPersistedListener
                    $email = (new Email())
                        ->subject('Mot de passe par défault | MadiFax')
                        ->to(new Address($entity->getEmail(), $entity->getFullName()))
-                       ->from(new Address('app@madifax.com', 'MadiFax'))
+                       ->from(new Address('contact@devscas.tech', 'MadiFax'))
                        ->text($password);
 
                    $this->mailer->send($email);
