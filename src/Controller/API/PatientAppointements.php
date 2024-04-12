@@ -10,12 +10,12 @@ use App\Repository\PatientRepository;
 use Symfony\Component\HttpKernel\Attribute\AsController;
 
 /**
- * Class GetPatientAppointements.
+ * Class PatientAppointements.
  *
  * @author bernard-ng <bernard@devscast.tech>
  */
 #[AsController]
-final readonly class GetPatientAppointements
+final readonly class PatientAppointements
 {
     public function __construct(
        private PatientRepository $repository

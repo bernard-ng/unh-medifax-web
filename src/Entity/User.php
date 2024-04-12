@@ -33,7 +33,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180, unique: true)]
     #[Assert\Email]
     #[Assert\NotBlank]
-    #[Groups(['read:collection', 'read:item'])]
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
     protected ?string $email = null;
 
     #[ORM\Column]
@@ -43,22 +43,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[Groups(['write:item'])]
     protected ?string $password = "";
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
-    #[Groups(['read:collection', 'read:item'])]
-    protected ?string $full_name = null;
+    #[Groups(['read:collection', 'read:item', 'write:item'])]
+    protected ?string $fullName = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     #[Groups(['read:collection', 'read:item'])]
-    protected ?string $phone_number = null;
+    protected ?string $phoneNumber = null;
 
     #[ORM\Column]
-    protected ?\DateTimeImmutable $created_at = null;
+    protected ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(nullable: true)]
-    protected ?\DateTimeImmutable $updated_at = null;
+    protected ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(type: 'boolean')]
     protected bool $isVerified = false;
@@ -69,7 +70,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __construct()
     {
-        $this->created_at = new \DateTimeImmutable();
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
@@ -144,48 +145,48 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getFullName(): ?string
     {
-        return $this->full_name;
+        return $this->fullName;
     }
 
-    public function setFullName(string $full_name): static
+    public function setFullName(string $fullName): static
     {
-        $this->full_name = $full_name;
+        $this->fullName = $fullName;
 
         return $this;
     }
 
     public function getPhoneNumber(): ?string
     {
-        return $this->phone_number;
+        return $this->phoneNumber;
     }
 
-    public function setPhoneNumber(?string $phone_number): static
+    public function setPhoneNumber(?string $phoneNumber): static
     {
-        $this->phone_number = $phone_number;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): static
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
     public function getUpdatedAt(): ?\DateTimeImmutable
     {
-        return $this->updated_at;
+        return $this->updatedAt;
     }
 
-    public function setUpdatedAt(?\DateTimeImmutable $updated_at): static
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): static
     {
-        $this->updated_at = $updated_at;
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }

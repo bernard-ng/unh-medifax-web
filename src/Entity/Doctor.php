@@ -29,7 +29,7 @@ class Doctor extends User
 
     #[ORM\Column]
     #[Groups(['read:collection', 'read:item'])]
-    private ?bool $is_available = null;
+    private ?bool $isAvailable = null;
 
     #[ORM\OneToMany(mappedBy: 'doctor', targetEntity: Appointment::class, orphanRemoval: true)]
     private Collection $appointments;
@@ -55,12 +55,12 @@ class Doctor extends User
 
     public function isIsAvailable(): ?bool
     {
-        return $this->is_available;
+        return $this->isAvailable;
     }
 
-    public function setIsAvailable(bool $is_available): static
+    public function setIsAvailable(bool $isAvailable): static
     {
-        $this->is_available = $is_available;
+        $this->isAvailable = $isAvailable;
 
         return $this;
     }

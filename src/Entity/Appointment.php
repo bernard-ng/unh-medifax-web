@@ -12,14 +12,14 @@ use App\Repository\AppointmentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
-use App\Controller\API\GetPatientAppointements;
+use App\Controller\API\PatientAppointements;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: AppointmentRepository::class)]
 #[ApiResource(operations: [
     new GetCollection(
         uriTemplate: '/appointments/patient/{id}',
-        controller: GetPatientAppointements::class,
+        controller: PatientAppointements::class,
         openapiContext: [
             "summary" => "Retrieves the collection of Appointment resources for a Patient.",
         ],
@@ -27,7 +27,10 @@ use Symfony\Component\Validator\Constraints as Assert;
         read: false,
         name: 'appointments'
     ),
-    new Post(denormalizationContext: ['groups' => ['write:item']])
+    new Post(
+        normalizationContext: ['groups' => ['read:item']],
+        denormalizationContext: ['groups' => ['write:item']]
+    )
 ])]
 class Appointment
 {
@@ -48,10 +51,10 @@ class Appointment
     private ?Doctor $doctor = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $created_at = null;
+    private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $updated_at = null;
+    private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(length: 255, enumType: AppointmentStatus::class)]
     #[Groups(['read:collection', 'read:item'])]
@@ -69,7 +72,7 @@ class Appointment
 
     public function __construct()
     {
-        $this->created_at = new \DateTimeImmutable();
+        $this->createdAt = new \DateTimeImmutable();
         $this->status = AppointmentStatus::PENDING;
     }
 
@@ -104,24 +107,24 @@ class Appointment
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): static
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
     public function getUpdatedAt(): ?\DateTimeImmutable
     {
-        return $this->updated_at;
+        return $this->updatedAt;
     }
 
-    public function setUpdatedAt(?\DateTimeImmutable $updated_at): static
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): static
     {
-        $this->updated_at = $updated_at;
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }

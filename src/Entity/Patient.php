@@ -6,19 +6,32 @@ namespace App\Entity;
 
 use App\Enum\Subscription;
 use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\Post;
 use App\Repository\PatientRepository;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\GetCollection;
+use App\Controller\API\RegisterPatient;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
-use App\Controller\API\GetPatientAppointements;
+use App\Controller\API\PatientAppointements;
 
 #[ORM\Entity(repositoryClass: PatientRepository::class)]
 #[ApiResource(
     operations: [
-        new Get(normalizationContext: ['groups' => ['read:item']])
+        new Get(normalizationContext: ['groups' => ['read:item']]),
+        new Post(
+            uriTemplate: '/register',
+            controller: RegisterPatient::class,
+            openapiContext: [
+                'summary' => 'Registers a new patient'
+            ],
+            normalizationContext: ['groups' => ['read:item']],
+            denormalizationContext: ['groups' => ['write:item']],
+            write: false,
+            name: 'register'
+        )
     ]
 )]
 class Patient extends User
