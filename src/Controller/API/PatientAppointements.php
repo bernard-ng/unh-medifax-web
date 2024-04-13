@@ -30,6 +30,6 @@ final readonly class PatientAppointements
         /** @var Patient|null $patient */
         $patient = $this->repository->find($id);
 
-        return $patient?->getAppointments()->toArray();
+        return $patient->getAppointments()->toArray() ?? [];
     }
 }
