@@ -20,3 +20,5 @@ api_platform:
             JWT:
                 name: Authorization
                 type: header
+    exception_to_status:
+        Symfony\Component\HttpKernel\Exception\NotFoundHttpException: 404
