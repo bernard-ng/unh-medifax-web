@@ -29,7 +29,7 @@ use Symfony\Component\Validator\Constraints as Assert;
     ),
     new Post(
         normalizationContext: ['groups' => ['read:item']],
-        denormalizationContext: ['groups' => ['write:item']]
+        denormalizationContext: ['groups' => ['write:appointment:item']]
     )
 ])]
 class Appointment
@@ -42,12 +42,12 @@ class Appointment
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['read:collection', 'read:item', 'write:item'])]
+    #[Groups(['read:collection', 'read:item', 'write:appointment:item'])]
     private ?Patient $patient = null;
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['read:collection', 'read:item', 'write:item'])]
+    #[Groups(['read:collection', 'read:item', 'write:appointment:item'])]
     private ?Doctor $doctor = null;
 
     #[ORM\Column]
@@ -62,12 +62,12 @@ class Appointment
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     #[Assert\NotBlank]
-    #[Groups(['read:collection', 'read:item', 'write:item'])]
+    #[Groups(['read:collection', 'read:item', 'write:appointment:item'])]
     private ?string $description = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     #[Assert\GreaterThan('today')]
-    #[Groups(['read:collection', 'read:item', 'write:item'])]
+    #[Groups(['read:collection', 'read:item', 'write:appointment:item'])]
     private ?\DateTimeInterface $date = null;
 
     public function __construct()

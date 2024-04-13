@@ -2,9 +2,8 @@ api_platform:
     title: Medifax API
     version: 1.0.0
     formats:
-        json: ['application/json']
+        jsonapi:  ['application/vnd.api+json', 'application/json']
     docs_formats:
-        json: ['application/json']
         html: ['text/html']
     defaults:
         pagination: false
