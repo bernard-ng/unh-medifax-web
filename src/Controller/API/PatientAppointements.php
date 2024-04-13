@@ -8,6 +8,7 @@ use App\Entity\Patient;
 use App\Entity\Appointment;
 use App\Repository\PatientRepository;
 use Symfony\Component\HttpKernel\Attribute\AsController;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Class PatientAppointements.
@@ -30,6 +31,10 @@ final readonly class PatientAppointements
         /** @var Patient|null $patient */
         $patient = $this->repository->find($id);
 
-        return $patient->getAppointments()->toArray() ?? [];
+        if ($patient === null) {
+            throw new NotFoundHttpException();
+        }
+
+        return $patient->getAppointments()->toArray();
     }
 }
