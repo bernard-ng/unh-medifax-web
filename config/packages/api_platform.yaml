@@ -2,7 +2,7 @@ api_platform:
     title: Medifax API
     version: 1.0.0
     formats:
-        jsonapi:  ['application/json']
+        json:  ['application/json']
         jsonld: ['application/ld+json']
     docs_formats:
         html: ['text/html']
