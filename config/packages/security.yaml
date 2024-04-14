@@ -25,7 +25,6 @@ security:
         api:
             pattern: ^/api
             stateless: true
-            provider: app_user_provider
             jwt: ~
 
         main:
@@ -54,6 +53,8 @@ security:
          - { path: ^/admin, roles: ROLE_ADMIN }
          - { path: ^/api/login, roles: PUBLIC_ACCESS }
          - { path: ^/api/register, roles: PUBLIC_ACCESS }
+         - { path: ^/api/docs.html$, roles: PUBLIC_ACCESS }
+         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
 
 when@test:
     security:

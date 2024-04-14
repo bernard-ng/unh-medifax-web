@@ -9,18 +9,28 @@ use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\Post;
 use App\Repository\PatientRepository;
 use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\GetCollection;
+use App\Controller\API\CurrentPatient;
 use App\Controller\API\RegisterPatient;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
-use App\Controller\API\PatientAppointements;
+
 
 #[ORM\Entity(repositoryClass: PatientRepository::class)]
 #[ApiResource(
     operations: [
         new Get(normalizationContext: ['groups' => ['read:item']]),
+        new Get(
+            uriTemplate: '/me',
+            controller: CurrentPatient::class,
+            openapiContext: [
+                'summary' => 'Retrieves data for the currently logged in user'
+            ],
+            normalizationContext: ['groups' => ['read:item']],
+            read: false,
+            name: 'me'
+        ),
         new Post(
             uriTemplate: '/register',
             controller: RegisterPatient::class,
