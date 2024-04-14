@@ -24,7 +24,6 @@ use Symfony\Component\Validator\Constraints as Assert;
             "summary" => "Retrieves the collection of Appointment resources for a Patient.",
         ],
         normalizationContext: ['groups' => ['read:collection']],
-        read: false,
         name: 'appointments'
     ),
     new Post(

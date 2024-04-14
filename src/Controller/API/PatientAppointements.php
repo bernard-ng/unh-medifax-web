@@ -18,23 +18,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 #[AsController]
 final readonly class PatientAppointements
 {
-    public function __construct(
-       private PatientRepository $repository
-    ) {
-    }
-
     /**
      * @return array<Appointment>
      */
-    public function __invoke(string $id): array
+    public function __invoke(Patient $patient): array
     {
-        /** @var Patient|null $patient */
-        $patient = $this->repository->find($id);
-
-        if ($patient === null) {
-            throw new NotFoundHttpException();
-        }
-
         return $patient->getAppointments()->toArray();
     }
 }
