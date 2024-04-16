@@ -11,6 +11,7 @@ use ApiPlatform\Metadata\GetCollection;
 use App\Repository\AppointmentRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Controller\API\CreateAppointment;
 use Symfony\Component\Serializer\Attribute\Groups;
 use App\Controller\API\PatientAppointements;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -28,6 +29,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         name: 'appointments'
     ),
     new Post(
+        controller: CreateAppointment::class,
         normalizationContext: ['groups' => ['read:item']],
         denormalizationContext: ['groups' => ['write:appointment:item']]
     )
@@ -42,7 +44,7 @@ class Appointment
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['read:collection', 'read:item', 'write:appointment:item'])]
+    #[Groups(['read:collection', 'read:item'])]
     private ?Patient $patient = null;
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
