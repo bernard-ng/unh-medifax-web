@@ -6,9 +6,8 @@ namespace App\Controller\API;
 
 use App\Entity\Patient;
 use App\Entity\Appointment;
-use App\Repository\PatientRepository;
 use Symfony\Component\HttpKernel\Attribute\AsController;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * Class PatientAppointements.
@@ -16,13 +15,16 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * @author bernard-ng <bernard@devscast.tech>
  */
 #[AsController]
-final readonly class PatientAppointements
+final class PatientAppointements extends AbstractController
 {
     /**
      * @return array<Appointment>
      */
-    public function __invoke(Patient $patient): array
+    public function __invoke(): array
     {
-        return $patient->getAppointments()->toArray();
+        /** @var Patient $patient */
+        $patient = $this->getUser();
+
+        return $patient?->getAppointments()->toArray() ?? [];
     }
 }

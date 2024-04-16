@@ -18,12 +18,13 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\Entity(repositoryClass: AppointmentRepository::class)]
 #[ApiResource(operations: [
     new GetCollection(
-        uriTemplate: '/appointments/patient/{id}',
+        uriTemplate: '/appointments/patient',
         controller: PatientAppointements::class,
         openapiContext: [
-            "summary" => "Retrieves the collection of Appointment resources for a Patient.",
+            "summary" => "Retrieves the collection of Appointment resources for the logged in Patient.",
         ],
         normalizationContext: ['groups' => ['read:collection']],
+        read: false,
         name: 'appointments'
     ),
     new Post(
